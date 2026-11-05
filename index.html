@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#home">Teuku Riezadly Syahrazzie Rhaqshah</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills and Interest</a></li>
+            <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="container py-5">
+      <h2 class="text-center">Home</h2>
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="asset/1.jpg" alt="Ini saya bukan Henry Cavill">
+        </div>
+      <div class="col-md-8">
+        <p>Halo! Kenalin nama aku Teuku Riezadly,<br>boleh panggil aku Riezadly atau Zetli.<br><br>
+        <a href="#contact" class="btn btn-dark btn-lg">Contact Me</a> 
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="skills" class="container py-5">
+      <h2 class="text-center">Skills and Interest</h2><br>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <div class="card h-100 p-4 shadow-sm">
+            <h5 class="fw-bold mb-3">Keahlian</h5>
+            <ul class="mb-0">
+              <li>HTML dan CSS dasar</li>
+              <li>Bahasa C</li>
+              <li>Logika pemrograman</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="card h-100 p-4 shadow-sm">
+            <h5 class="fw-bold mb-3">Minat</h5>
+            <ul class="mb-0">
+              <li>Pemrograman Web</li>
+              <li>Web Design</li>
+              <li>Tidur 12 Jam</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p style="color: rgba(255, 255, 255, 0.505);">*jujur agak ngarang dikit, tapi yaudah lah ya</p>
+    </section>
+
+    <section id="project" class="container py-5">
+      <h2 class="text-center">Project</h2>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <img src="asset/2.png" alt="">
+          <p class="mt-2">Tugas Portofolio Pemrograman Web</p>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <img src="asset/3.png" alt="">
+          <p class="mt-2">Nyoba bikin Portofolio</p>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <img src="asset/4.png" alt="" alt="">
+          <p class="mt-2">Tugas Form Pemesanan</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container py-5">
+      <h2 class="text-center mb-4">Contact</h2>
+
+      <div class="text-center">
+        <button type="button" class="btn btn-dark btn-lg" onclick="tampilkanKontak()">
+          Lihat Detail Kontak
+        </button>
+      </div>
+
+      <div id="alertContainer" class="mt-4"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+      function tampilkanKontak() {
+        const container = document.getElementById("alertContainer");
+
+        if (container.children.length > 0) return;
+
+        container.innerHTML = `
+          <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <h5 class="alert-heading">Detail Kontak</h5>
+            <hr>
+            <p class="mb-1"><strong>Nama:</strong> Teuku Riezadly</p>
+            <p class="mb-1"><strong>Email:</strong> zetlieforpublicuses@gmail.com</p>
+            <p class="mb-0"><strong>WhatsApp:</strong> 0812-1111-0502</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        `;
+      }
+    </script>
+  </body>
+</html>
